@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --orange: hsl(15, 100%, 70%);
+  --softBlue: hsl(195, 74%, 62%);
+  --lightRed: hsl(348, 100%, 68%);
+  --limeGreen: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --softOrange: hsl(43, 84%, 65%);
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--veryDarkBlue);
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  color: #fff;
+  margin: 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+#idCard {
+  background: var(--darkBlue);
+  font-weight: 100;
+  border-radius: 15px;
+  grid-row: 1/3;
+}
+
+#person {
+  background: var(--blue);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+#person img {
+  width: 70px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+#person small {
+  font-size: 14px;
+  color: var(--paleBlue);
+}
+
+#person .name {
+  font-size: 1.8rem;
+}
+
+.timeFrames {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 3.5;
+  color: var(--paleBlue);
+}
+
+.timeFrames p:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 17px;
+}
+#Work {
+  background-color: var(--orange);
+  background-image: url(./images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: top -10px right 15px;
+}
+
+#Play {
+  background-color: var(--softBlue);
+  background-image: url(./images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: top -10px right 15px;
+}
+
+#Study {
+  background-color: var(--lightRed);
+  background-image: url(./images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: top -10px right 15px;
+}
+
+#Exercise {
+  background-color: var(--limeGreen);
+  background-image: url(./images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: top 0px right 15px;
+}
+
+#Social {
+  background-color: var(--violet);
+  background-image: url(./images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: top -10px right 15px;
+}
+
+#SelfCare {
+  background-color: var(--softOrange);
+  background-image: url(./images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: top -10px right 15px;
+}
+
+.iconContainer {
+  height: 20%;
+}
+
+.stats {
+  background: var(--darkBlue);
+  border-radius: 15px;
+  line-height: 1.7;
+  padding: 20px;
+  min-height: 80%;
+}
+
+.stats:hover {
+  background-color: var(--desaturatedBlue);
+  cursor: pointer;
+}
+
+.ellipsisContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ellipsis {
+  height: 5px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.current {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+
+.previous {
+  font-size: 15px;
+  color: var(--paleBlue);
+}
+.active {
+  color: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  #person {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #person img {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .timeFrames {
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: normal;
+  }
+
+  .statsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+}
